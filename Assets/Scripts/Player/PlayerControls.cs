@@ -34,7 +34,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""MoveZ"",
@@ -46,13 +46,22 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MoveNeck"",
-                    ""type"": ""Value"",
+                    ""name"": ""MoveNeckX"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""9fcfb666-e7f7-4c6d-9157-895dfb73c176"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveNeckZ"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""54ccb5bd-d131-487a-b1ab-6d0152f47934"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -70,11 +79,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6289ce3f-185c-4574-85a2-f7e3800cfc75"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""path"": ""<Gamepad>/rightStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""MoveNeck"",
+                    ""action"": ""MoveNeckX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -86,6 +95,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""MoveZ"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33a3993d-ce1a-4f8a-82ce-77a7d3e78d71"",
+                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""MoveNeckZ"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -110,7 +130,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_SinglePlayer = asset.FindActionMap("SinglePlayer", throwIfNotFound: true);
         m_SinglePlayer_MoveX = m_SinglePlayer.FindAction("MoveX", throwIfNotFound: true);
         m_SinglePlayer_MoveZ = m_SinglePlayer.FindAction("MoveZ", throwIfNotFound: true);
-        m_SinglePlayer_MoveNeck = m_SinglePlayer.FindAction("MoveNeck", throwIfNotFound: true);
+        m_SinglePlayer_MoveNeckX = m_SinglePlayer.FindAction("MoveNeckX", throwIfNotFound: true);
+        m_SinglePlayer_MoveNeckZ = m_SinglePlayer.FindAction("MoveNeckZ", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -174,14 +195,16 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private List<ISinglePlayerActions> m_SinglePlayerActionsCallbackInterfaces = new List<ISinglePlayerActions>();
     private readonly InputAction m_SinglePlayer_MoveX;
     private readonly InputAction m_SinglePlayer_MoveZ;
-    private readonly InputAction m_SinglePlayer_MoveNeck;
+    private readonly InputAction m_SinglePlayer_MoveNeckX;
+    private readonly InputAction m_SinglePlayer_MoveNeckZ;
     public struct SinglePlayerActions
     {
         private @PlayerControls m_Wrapper;
         public SinglePlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @MoveX => m_Wrapper.m_SinglePlayer_MoveX;
         public InputAction @MoveZ => m_Wrapper.m_SinglePlayer_MoveZ;
-        public InputAction @MoveNeck => m_Wrapper.m_SinglePlayer_MoveNeck;
+        public InputAction @MoveNeckX => m_Wrapper.m_SinglePlayer_MoveNeckX;
+        public InputAction @MoveNeckZ => m_Wrapper.m_SinglePlayer_MoveNeckZ;
         public InputActionMap Get() { return m_Wrapper.m_SinglePlayer; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -197,9 +220,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MoveZ.started += instance.OnMoveZ;
             @MoveZ.performed += instance.OnMoveZ;
             @MoveZ.canceled += instance.OnMoveZ;
-            @MoveNeck.started += instance.OnMoveNeck;
-            @MoveNeck.performed += instance.OnMoveNeck;
-            @MoveNeck.canceled += instance.OnMoveNeck;
+            @MoveNeckX.started += instance.OnMoveNeckX;
+            @MoveNeckX.performed += instance.OnMoveNeckX;
+            @MoveNeckX.canceled += instance.OnMoveNeckX;
+            @MoveNeckZ.started += instance.OnMoveNeckZ;
+            @MoveNeckZ.performed += instance.OnMoveNeckZ;
+            @MoveNeckZ.canceled += instance.OnMoveNeckZ;
         }
 
         private void UnregisterCallbacks(ISinglePlayerActions instance)
@@ -210,9 +236,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MoveZ.started -= instance.OnMoveZ;
             @MoveZ.performed -= instance.OnMoveZ;
             @MoveZ.canceled -= instance.OnMoveZ;
-            @MoveNeck.started -= instance.OnMoveNeck;
-            @MoveNeck.performed -= instance.OnMoveNeck;
-            @MoveNeck.canceled -= instance.OnMoveNeck;
+            @MoveNeckX.started -= instance.OnMoveNeckX;
+            @MoveNeckX.performed -= instance.OnMoveNeckX;
+            @MoveNeckX.canceled -= instance.OnMoveNeckX;
+            @MoveNeckZ.started -= instance.OnMoveNeckZ;
+            @MoveNeckZ.performed -= instance.OnMoveNeckZ;
+            @MoveNeckZ.canceled -= instance.OnMoveNeckZ;
         }
 
         public void RemoveCallbacks(ISinglePlayerActions instance)
@@ -243,6 +272,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     {
         void OnMoveX(InputAction.CallbackContext context);
         void OnMoveZ(InputAction.CallbackContext context);
-        void OnMoveNeck(InputAction.CallbackContext context);
+        void OnMoveNeckX(InputAction.CallbackContext context);
+        void OnMoveNeckZ(InputAction.CallbackContext context);
     }
 }

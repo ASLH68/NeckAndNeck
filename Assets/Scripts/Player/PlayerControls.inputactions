@@ -12,7 +12,7 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MoveZ",
@@ -24,13 +24,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MoveNeck",
-                    "type": "Value",
+                    "name": "MoveNeckX",
+                    "type": "PassThrough",
                     "id": "9fcfb666-e7f7-4c6d-9157-895dfb73c176",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveNeckZ",
+                    "type": "PassThrough",
+                    "id": "54ccb5bd-d131-487a-b1ab-6d0152f47934",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -48,11 +57,11 @@
                 {
                     "name": "",
                     "id": "6289ce3f-185c-4574-85a2-f7e3800cfc75",
-                    "path": "<Gamepad>/rightStick",
+                    "path": "<Gamepad>/rightStick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "MoveNeck",
+                    "action": "MoveNeckX",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -64,6 +73,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "MoveZ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33a3993d-ce1a-4f8a-82ce-77a7d3e78d71",
+                    "path": "<Gamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "MoveNeckZ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
