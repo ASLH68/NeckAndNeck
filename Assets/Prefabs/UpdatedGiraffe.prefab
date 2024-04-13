@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7061498520253394960}
   - component: {fileID: 7205858032859184605}
   - component: {fileID: 412854590490884004}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597d8b84db7ace04d8b481be9b39ada6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4000
+  moveSpeed: 4250
 --- !u!144 &412854590490884004
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -235,6 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5510955886392888311}
+  - component: {fileID: 6369874224423164716}
   m_Layer: 0
   m_Name: UpdatedGiraffe
   m_TagString: Untagged
@@ -263,6 +264,18 @@ Transform:
   - {fileID: 7791293670208132671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6369874224423164716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2244309364026584268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a135e4405f7dcf741b2251b971c2f731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3644181606192158159
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +395,7 @@ GameObject:
   - component: {fileID: 596757342404502107}
   - component: {fileID: 8231416562826010198}
   - component: {fileID: 5323079908913439011}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Neck 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +575,7 @@ GameObject:
   - component: {fileID: 3590716709933253465}
   - component: {fileID: 1605356701734025837}
   - component: {fileID: 4588038763663072021}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Neck 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,7 +1043,7 @@ GameObject:
   - component: {fileID: 25005778514946150}
   - component: {fileID: 1965077527794469811}
   - component: {fileID: 7412956923461168553}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Neck 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1328,7 @@ GameObject:
   - component: {fileID: 3157122965489218946}
   - component: {fileID: 1433155597240915252}
   - component: {fileID: 1881850310028659552}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Neck 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
