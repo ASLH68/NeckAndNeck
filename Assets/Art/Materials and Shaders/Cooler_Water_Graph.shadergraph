@@ -929,8 +929,8 @@
     "m_ShaderOutputName": "Center",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 1.7300000190734864,
-        "y": 1.0
+        "x": -0.28999999165534975,
+        "y": 0.550000011920929
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -2711,8 +2711,8 @@
     "m_ShaderOutputName": "Offset",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 11.760000228881836,
+        "y": -60.22999954223633
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -4257,8 +4257,8 @@
     "m_ShaderOutputName": "Strength",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": -3.0,
-        "y": -13.100000381469727
+        "x": -3.4600000381469728,
+        "y": -17.0
     },
     "m_DefaultValue": {
         "x": 0.0,
