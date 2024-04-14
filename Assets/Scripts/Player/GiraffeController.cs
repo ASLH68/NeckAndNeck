@@ -14,10 +14,25 @@ public class GiraffeController : MonoBehaviour
     
     Rigidbody rb;
 
+    bool canGetHit = true;
+    [SerializeField] float knockBackStrength;
+
+    public static GiraffeController firstPlayerInstance;
+    public static GiraffeController secondPlayerInstance;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         cameraTrans = Camera.main.transform;
+
+        if (firstPlayerInstance == null)
+        {
+            firstPlayerInstance = this;
+        }
+        else if (secondPlayerInstance == null)
+        {
+            secondPlayerInstance = this;
+        }
     }
 
     private void Update()
@@ -33,6 +48,27 @@ public class GiraffeController : MonoBehaviour
             Vector3 correctedDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             rb.velocity = correctedDirection.normalized * moveSpeed * Time.deltaTime;
         }
+    }
+
+    public void GotHit(bool hit, Vector3 hitDirection = new Vector3())
+    {
+        if (canGetHit)
+        {
+            canGetHit = false;
+            StartCoroutine(InvincibilityTimer());
+
+            if (hit)
+            {
+                rb.AddForce(hitDirection * knockBackStrength);
+            }
+        }
+    }
+
+    private IEnumerator InvincibilityTimer()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        canGetHit = true;
     }
 
     public void OnMoveX(InputValue context)
