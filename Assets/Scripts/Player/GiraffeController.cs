@@ -14,6 +14,9 @@ public class GiraffeController : MonoBehaviour
     
     Rigidbody rb;
 
+    Vector3 firstPosition = new Vector3(2.4f, 18.52f, -6f);
+    Vector3 secondPosition = new Vector3(2.4f, 18.52f, -40f);
+
     bool canGetHit = true;
     [SerializeField] float knockBackStrength;
 
@@ -28,10 +31,12 @@ public class GiraffeController : MonoBehaviour
         if (firstPlayerInstance == null)
         {
             firstPlayerInstance = this;
+            transform.parent.position = firstPosition;
         }
         else if (secondPlayerInstance == null)
         {
             secondPlayerInstance = this;
+            transform.parent.position = secondPosition;
         }
     }
 
