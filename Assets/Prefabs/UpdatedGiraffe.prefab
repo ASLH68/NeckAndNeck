@@ -909,6 +909,7 @@ GameObject:
   - component: {fileID: 6956925168828772457}
   - component: {fileID: 7147280712075479495}
   - component: {fileID: 8060041597985832286}
+  - component: {fileID: 1088232132961063449}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1187,6 +1188,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &1088232132961063449
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223482644250006116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c41fd419cff41a8449ca7a3797bc0785, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5245979501054289355
 GameObject:
   m_ObjectHideFlags: 0
