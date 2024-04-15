@@ -8,6 +8,9 @@ public class CameraTestOne : MonoBehaviour
     [SerializeField] private Transform _playerTwoTransform;
 
     [SerializeField] private float _yOffSet;
+    [SerializeField] private float _xOffSet;
+    [SerializeField] private float _zOffSet;
+
     [SerializeField] private float _minDistance;
 
     private float _xMin, _xMax, _yMin, _yMax, _zMin, _zMax;
@@ -67,7 +70,7 @@ public class CameraTestOne : MonoBehaviour
 
         float distance = distanceX + distanceZ;
 
-        transform.position = new Vector3(xMiddle, yMiddle + _yOffSet, zMiddle - distance);
+        transform.position = new Vector3(xMiddle + _xOffSet, yMiddle + _yOffSet, (zMiddle - distance) + _zOffSet);
     }
 
 }
