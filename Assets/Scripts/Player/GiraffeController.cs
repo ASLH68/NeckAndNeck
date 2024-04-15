@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GiraffeController : MonoBehaviour
+public class GiraffeController : IController
 {
     [SerializeField] float moveSpeed;
     float xAxis, zAxis;
@@ -26,6 +26,7 @@ public class GiraffeController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        playerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
 
         if (firstPlayerInstance == null)

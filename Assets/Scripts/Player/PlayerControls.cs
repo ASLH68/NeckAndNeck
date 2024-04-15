@@ -71,7 +71,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
+                    ""groups"": ""Gamepad;Body"",
                     ""action"": ""MoveX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -82,7 +82,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/rightStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
+                    ""groups"": ""Gamepad;Head"",
                     ""action"": ""MoveNeckX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -93,7 +93,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick/y"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
+                    ""groups"": ""Gamepad;Body"",
                     ""action"": ""MoveZ"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -104,8 +104,36 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/rightStick/y"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
+                    ""groups"": ""Gamepad;Head"",
                     ""action"": ""MoveNeckZ"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""JoinGame"",
+            ""id"": ""5d809f21-8684-4965-89b8-f6de771fcc49"",
+            ""actions"": [
+                {
+                    ""name"": ""Join"",
+                    ""type"": ""Button"",
+                    ""id"": ""a570bb19-8313-4e55-b01e-5ef50a292aff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""add985e8-6361-4751-8aac-7436e38ee989"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Head;Body;Gamepad"",
+                    ""action"": ""Join"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -123,6 +151,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Body"",
+            ""bindingGroup"": ""Body"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Head"",
+            ""bindingGroup"": ""Head"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -132,6 +182,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_SinglePlayer_MoveZ = m_SinglePlayer.FindAction("MoveZ", throwIfNotFound: true);
         m_SinglePlayer_MoveNeckX = m_SinglePlayer.FindAction("MoveNeckX", throwIfNotFound: true);
         m_SinglePlayer_MoveNeckZ = m_SinglePlayer.FindAction("MoveNeckZ", throwIfNotFound: true);
+        // JoinGame
+        m_JoinGame = asset.FindActionMap("JoinGame", throwIfNotFound: true);
+        m_JoinGame_Join = m_JoinGame.FindAction("Join", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -259,6 +312,52 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public SinglePlayerActions @SinglePlayer => new SinglePlayerActions(this);
+
+    // JoinGame
+    private readonly InputActionMap m_JoinGame;
+    private List<IJoinGameActions> m_JoinGameActionsCallbackInterfaces = new List<IJoinGameActions>();
+    private readonly InputAction m_JoinGame_Join;
+    public struct JoinGameActions
+    {
+        private @PlayerControls m_Wrapper;
+        public JoinGameActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Join => m_Wrapper.m_JoinGame_Join;
+        public InputActionMap Get() { return m_Wrapper.m_JoinGame; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(JoinGameActions set) { return set.Get(); }
+        public void AddCallbacks(IJoinGameActions instance)
+        {
+            if (instance == null || m_Wrapper.m_JoinGameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_JoinGameActionsCallbackInterfaces.Add(instance);
+            @Join.started += instance.OnJoin;
+            @Join.performed += instance.OnJoin;
+            @Join.canceled += instance.OnJoin;
+        }
+
+        private void UnregisterCallbacks(IJoinGameActions instance)
+        {
+            @Join.started -= instance.OnJoin;
+            @Join.performed -= instance.OnJoin;
+            @Join.canceled -= instance.OnJoin;
+        }
+
+        public void RemoveCallbacks(IJoinGameActions instance)
+        {
+            if (m_Wrapper.m_JoinGameActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IJoinGameActions instance)
+        {
+            foreach (var item in m_Wrapper.m_JoinGameActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_JoinGameActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public JoinGameActions @JoinGame => new JoinGameActions(this);
     private int m_GamepadSchemeIndex = -1;
     public InputControlScheme GamepadScheme
     {
@@ -268,11 +367,33 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
+    private int m_BodySchemeIndex = -1;
+    public InputControlScheme BodyScheme
+    {
+        get
+        {
+            if (m_BodySchemeIndex == -1) m_BodySchemeIndex = asset.FindControlSchemeIndex("Body");
+            return asset.controlSchemes[m_BodySchemeIndex];
+        }
+    }
+    private int m_HeadSchemeIndex = -1;
+    public InputControlScheme HeadScheme
+    {
+        get
+        {
+            if (m_HeadSchemeIndex == -1) m_HeadSchemeIndex = asset.FindControlSchemeIndex("Head");
+            return asset.controlSchemes[m_HeadSchemeIndex];
+        }
+    }
     public interface ISinglePlayerActions
     {
         void OnMoveX(InputAction.CallbackContext context);
         void OnMoveZ(InputAction.CallbackContext context);
         void OnMoveNeckX(InputAction.CallbackContext context);
         void OnMoveNeckZ(InputAction.CallbackContext context);
+    }
+    public interface IJoinGameActions
+    {
+        void OnJoin(InputAction.CallbackContext context);
     }
 }

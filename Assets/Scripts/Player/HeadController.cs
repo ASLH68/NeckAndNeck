@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HeadController : MonoBehaviour
+public class HeadController : IController
 {
     [SerializeField] float moveSpeed;
     float xAxis, zAxis;
@@ -15,6 +15,7 @@ public class HeadController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        playerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
     }
 
