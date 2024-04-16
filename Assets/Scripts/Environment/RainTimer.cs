@@ -12,7 +12,7 @@ public class RainTimer : MonoBehaviour
     int _secondCount = -1;
     [SerializeField] int _breakDuration = 15;
     int _rainDuration = 15;
-    int _rainEnd;
+    int _rainEnd = 30;
     bool _isRaining = false;
     public bool isRaining { get => _isRaining; }
 
@@ -56,6 +56,12 @@ public class RainTimer : MonoBehaviour
                 if (_rainDice <= _rainChance)
                 {
                     StartRain();
+                    Debug.Log("raining");
+                }
+                else
+                {
+                    _secondCount = -1;
+                    Debug.Log("failed");
                 }
 
                 // Tells rain when to end
@@ -82,6 +88,7 @@ public class RainTimer : MonoBehaviour
             if (_secondCount == _rainEnd)
             {
                 StopRain();
+                Debug.Log("stopped raining");
                 _secondCount = -1;
             }
 
