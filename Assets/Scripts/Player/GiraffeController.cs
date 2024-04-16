@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name :         GiraffeController.cs
+// Author :            Nick Grinstead
+// Creation Date :     04/10/24
+//
+// Brief Description : Takes player inputs for controlling the giraffe's body.
+*****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +33,7 @@ public class GiraffeController : IController
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        playerInputComponent = GetComponent<PlayerInput>();
+        PlayerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
 
         if (firstPlayerInstance == null)
@@ -79,11 +86,13 @@ public class GiraffeController : IController
 
     public void OnMoveX(InputValue context)
     {
-        xAxis = context.Get<float>();
+        if (canMove)
+            xAxis = context.Get<float>();
     }
 
     public void OnMoveZ(InputValue context)
     {
-        zAxis = context.Get<float>();
+        if (canMove)
+            zAxis = context.Get<float>();
     }
 }

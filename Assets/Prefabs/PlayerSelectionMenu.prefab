@@ -1031,15 +1031,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 4724233364933025748}
+    m_SelectOnRight: {fileID: 6319920557460927635}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1061,7 +1061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2211106369632346289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7207579197641953876}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3116077070818106378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,15 +1298,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 2073048140077796965}
+    m_SelectOnRight: {fileID: 3496641169682468227}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1316,7 +1328,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9164491882008096833}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7207579197641953876}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3543049076608800873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,12 +1431,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 3779352025354114609}
+    m_SelectOnRight: {fileID: 3779352025354114609}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.5058824, g: 0.24313727, b: 0.06666667, a: 1}
@@ -1437,7 +1461,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6390946624700597240}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7207579197641953876}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: ClearSelectedCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6178126241820855657}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4173683994053924343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1498,7 @@ GameObject:
   - component: {fileID: 1888308842358279871}
   - component: {fileID: 1697602550365368143}
   - component: {fileID: 5057090620175122476}
+  - component: {fileID: 7207579197641953876}
   m_Layer: 5
   m_Name: PlayerSelectionMenu
   m_TagString: Untagged
@@ -1540,6 +1589,29 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7207579197641953876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173683994053924343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e8ed494ae0a3248b06e0a83103adbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 5245979501054289355, guid: b1e2914f657c8cb47953fc0efe221855,
+    type: 3}
+  confirmationDialogue: {fileID: 6178126241820855657}
+  firstButton: {fileID: 3330133229673639582}
+  noButton: {fileID: 3543049076608800873}
+  selectMenuUI: {fileID: 2380450536847124978}
+  text:
+  - {fileID: 6394873311332720481}
+  - {fileID: 596643046874095566}
+  - {fileID: 2183757004605376239}
+  - {fileID: 8132515229799993133}
 --- !u!1 &4215310219189629362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,15 +1744,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 3496641169682468227}
+    m_SelectOnRight: {fileID: 2073048140077796965}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1702,7 +1774,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4990990799029840745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7207579197641953876}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5657513337603050705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,15 +2818,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 6319920557460927635}
+    m_SelectOnRight: {fileID: 2073048140077796965}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2764,7 +2848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6442816222913881932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7207579197641953876}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7692648709524812199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,12 +2951,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 3160672656450026789}
+    m_SelectOnRight: {fileID: 3160672656450026789}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.5058824, g: 0.24313727, b: 0.06666667, a: 1}
@@ -2885,7 +2981,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3952362899169120281}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7207579197641953876}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: BeginPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7946573783922199160
 GameObject:
   m_ObjectHideFlags: 0
