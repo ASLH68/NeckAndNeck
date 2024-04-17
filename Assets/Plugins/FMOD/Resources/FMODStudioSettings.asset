@@ -552,6 +552,8 @@ MonoBehaviour:
   - Desktop/Master
   Banks:
   - Desktop/IntroAudio
+  - Desktop/Music
+  - Desktop/SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -567,18 +569,18 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131617
   Platforms:
+  - {fileID: -6822128646472455843}
+  - {fileID: -6603517466077535637}
+  - {fileID: -4363445328007962380}
+  - {fileID: -3885708956653113386}
+  - {fileID: -2372243856538231736}
+  - {fileID: -1147492881910189652}
+  - {fileID: -538631754118765390}
   - {fileID: 333987677897200696}
   - {fileID: 4462701976283141862}
-  - {fileID: 8968845906704615816}
-  - {fileID: -2372243856538231736}
   - {fileID: 5379626262663163281}
   - {fileID: 5455630547983008838}
-  - {fileID: -4363445328007962380}
-  - {fileID: -6822128646472455843}
-  - {fileID: -538631754118765390}
-  - {fileID: -6603517466077535637}
-  - {fileID: -3885708956653113386}
-  - {fileID: -1147492881910189652}
+  - {fileID: 8968845906704615816}
   MigratedPlatforms: 080000001200000006000000050000000b000000000000000a000000090000000c000000150000000200000001000000
 --- !u!114 &333987677897200696
 MonoBehaviour:
@@ -723,16 +725,16 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - 46fbfdf3fc43db0458918377fd40293e
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - de700ef3f37a49b58a57ae3addf01ad9
+  - e7a046c753c3c3d4aacc91f6597f310d
   - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - fd7c55dab0fce234b8c25f6ffca523c1
   - 52eb9df5db46521439908db3a29a1bbb
   - b7716510a1f36934c87976f3a81dbf3d
-  - de700ef3f37a49b58a57ae3addf01ad9
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - fd7c55dab0fce234b8c25f6ffca523c1
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - 2c5177b11d81d824dbb064f9ac8527da
+  - 46fbfdf3fc43db0458918377fd40293e
   codecChannels:
     Value: []
     HasValue: 0
