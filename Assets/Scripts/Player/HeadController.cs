@@ -1,9 +1,16 @@
+/*****************************************************************************
+// File Name :         HeadController.cs
+// Author :            Nick Grinstead
+// Creation Date :     04/11/24
+//
+// Brief Description : Takes player inputs for controlling the giraffe's head.
+*****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HeadController : MonoBehaviour
+public class HeadController : IController
 {
     [SerializeField] float moveSpeed;
     float xAxis, zAxis;
@@ -15,6 +22,7 @@ public class HeadController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        PlayerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
     }
 
@@ -32,11 +40,13 @@ public class HeadController : MonoBehaviour
 
     public void OnMoveNeckX(InputValue context)
     {
-        xAxis = context.Get<float>();
+        if (canMove)
+            xAxis = context.Get<float>();
     }
 
     public void OnMoveNeckZ(InputValue context)
     {
-        zAxis = context.Get<float>();
+        if (canMove)
+            zAxis = context.Get<float>();
     }
 }
