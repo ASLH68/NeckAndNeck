@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7836908481395064841}
   - component: {fileID: 5870585874639100527}
   - component: {fileID: 3432645998192698476}
+  - component: {fileID: 527613866969742933}
   m_Layer: 0
   m_Name: BGAmbience
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MonoBehaviour:
     Path: event:/Mussorgsky - Night on Bald Mountain
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -88,7 +89,7 @@ MonoBehaviour:
     Path: event:/Rain
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -119,7 +120,7 @@ MonoBehaviour:
     Path: event:/Maybe Thunder- French Horn
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
     Path: event:/Ambient Boat - Cello
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -159,3 +160,15 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &527613866969742933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9175943078095711718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8b2d8b9bbaf16448c3932cd3518056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
