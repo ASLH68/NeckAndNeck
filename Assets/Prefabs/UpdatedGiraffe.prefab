@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &676922366905528469
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -606,6 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &4202299355209918780
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -723,6 +725,7 @@ GameObject:
   - component: {fileID: 2700199387469782422}
   - component: {fileID: 5336599433473033509}
   - component: {fileID: 7596013444052284653}
+  - component: {fileID: 6753159531447438250}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -892,6 +895,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1800
   knockBackStrength: 150000
+--- !u!114 &6753159531447438250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987521887823614285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 934866772
+      Data2: 1292071636
+      Data3: -560279371
+      Data4: -1660496205
+    Path: event:/Walking
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 60
 --- !u!1 &5223482644250006116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &8060041597985832286
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1197,6 +1232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5487996796168976869}
   - component: {fileID: 1626168650057215473}
+  - component: {fileID: 5688850262390373641}
   m_Layer: 0
   m_Name: UpdatedGiraffe
   m_TagString: Untagged
@@ -1237,6 +1273,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a135e4405f7dcf741b2251b971c2f731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5688850262390373641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245979501054289355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 458487974
+      Data2: 1331459726
+      Data3: -950192993
+      Data4: -926234318
+    Path: event:/On Hit- Light Cymbal
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5776587932257302547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &1958763589452009026
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1843,6 +1911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &6290551933449748649
 ConfigurableJoint:
   m_ObjectHideFlags: 0

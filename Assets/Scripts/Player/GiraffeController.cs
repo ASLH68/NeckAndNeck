@@ -5,6 +5,7 @@
 //
 // Brief Description : Takes player inputs for controlling the giraffe's body.
 *****************************************************************************/
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,6 +61,16 @@ public class GiraffeController : IController
 
             Vector3 correctedDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             rb.velocity = correctedDirection.normalized * moveSpeed * Time.deltaTime;
+
+            if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
+            {
+                GetComponent<FMODUnity.StudioEventEmitter>().Play();
+            }
+            
+        }
+        else
+        {
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
         }
     }
 

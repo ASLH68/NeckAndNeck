@@ -7,7 +7,7 @@ public class UpdatePlayerLayer : MonoBehaviour
 {
     private void Awake()
     {
-        int numPlayers = PlayerInputManager.instance.playerCount;
+       /* int numPlayers = PlayerInputManager.instance.playerCount;
         if (numPlayers == 2)
         {
             tag = "Player1";
@@ -41,6 +41,6 @@ public class UpdatePlayerLayer : MonoBehaviour
                     secondChild.gameObject.layer = 7;
                 }
             }
-        }
+        }*/
     }
 }
