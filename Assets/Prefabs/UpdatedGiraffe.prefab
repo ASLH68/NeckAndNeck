@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 1573598498774068978}
   - component: {fileID: 5457930054983885388}
   - component: {fileID: 676922366905528469}
+  - component: {fileID: 3553930767368779165}
   m_Layer: 0
   m_Name: Neck 2
   m_TagString: Untagged
@@ -459,6 +460,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &3553930767368779165
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784394616228101910}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fe8f936651941e4b9c3bdd09cdd9e24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4945365571989674425
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +496,7 @@ GameObject:
   - component: {fileID: 7502043618883197493}
   - component: {fileID: 2762609639393878361}
   - component: {fileID: 4202299355209918780}
+  - component: {fileID: 7063504825464959519}
   m_Layer: 0
   m_Name: Neck 3
   m_TagString: Untagged
@@ -708,6 +731,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &7063504825464959519
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945365571989674425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad1c1de1bba23474190861b7e2dd2f13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4987521887823614285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1423,7 @@ GameObject:
   - component: {fileID: 2519447874789614284}
   - component: {fileID: 1318509584908516668}
   - component: {fileID: 1958763589452009026}
+  - component: {fileID: 1343947777038898835}
   m_Layer: 0
   m_Name: Neck 1
   m_TagString: Untagged
@@ -1613,6 +1658,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &1343947777038898835
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175987582558972673}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc2fbe64dbd0ac240af128c1646db5d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8212600560230688923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1799,7 @@ GameObject:
   - component: {fileID: 1526956991405319849}
   - component: {fileID: 5633499250175714554}
   - component: {fileID: 6290551933449748649}
+  - component: {fileID: 7216211660929957321}
   m_Layer: 0
   m_Name: Neck 4
   m_TagString: Untagged
@@ -1967,3 +2034,24 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &7216211660929957321
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781216825073917574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ea51bd84e5c3ff4991eea824c886ea8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
