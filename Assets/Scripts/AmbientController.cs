@@ -8,7 +8,7 @@ public class AmbientController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (Instance == null)
+        /*if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(this);
@@ -16,6 +16,6 @@ public class AmbientController : MonoBehaviour
         else
         {
             Destroy(this);
-        }
+        }*/
     }
 }
