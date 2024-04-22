@@ -309,30 +309,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!114 &475846561 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3447814233493160573, guid: 64329305c585bb54eb9a2b79d9cc9314,
-    type: 3}
-  m_PrefabInstance: {fileID: 2018604491551461620}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &516202111 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 64024743867139336, guid: 64329305c585bb54eb9a2b79d9cc9314,
-    type: 3}
-  m_PrefabInstance: {fileID: 2018604491551461620}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5995,24 +5971,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2119977112}
   m_SourcePrefab: {fileID: 100100000, guid: 054692626b69df54bbde382b3e65d9f5, type: 3}
---- !u!1 &2024840435 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7995280391707485609, guid: 64329305c585bb54eb9a2b79d9cc9314,
-    type: 3}
-  m_PrefabInstance: {fileID: 2018604491551461620}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2024840437 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 957537916569738816, guid: 64329305c585bb54eb9a2b79d9cc9314,
-    type: 3}
-  m_PrefabInstance: {fileID: 2018604491551461620}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024840435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2057458794
 GameObject:
   m_ObjectHideFlags: 0
@@ -6215,70 +6173,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 64024743867139336, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 64024743867139336, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnUp
-      value: 
-      objectReference: {fileID: 2024840437}
-    - target: {fileID: 64024743867139336, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 475846561}
-    - target: {fileID: 957537916569738816, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 957537916569738816, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnUp
-      value: 
-      objectReference: {fileID: 475846561}
-    - target: {fileID: 957537916569738816, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 516202111}
-    - target: {fileID: 1978842504210223606, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3447814233493160573, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3447814233493160573, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnUp
-      value: 
-      objectReference: {fileID: 516202111}
-    - target: {fileID: 3447814233493160573, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 2024840437}
-    - target: {fileID: 3516611369280140592, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: _firstEndButton
-      value: 
-      objectReference: {fileID: 2024840435}
     - target: {fileID: 5573842515430377844, guid: 64329305c585bb54eb9a2b79d9cc9314,
         type: 3}
       propertyPath: m_Name
       value: EndScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5882783701999203059, guid: 64329305c585bb54eb9a2b79d9cc9314,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9079691821660151263, guid: 64329305c585bb54eb9a2b79d9cc9314,
         type: 3}
