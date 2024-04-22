@@ -14,8 +14,8 @@ public class Track : MonoBehaviour
     //Once the actual players are set call this function
     public void TrackPlayer()
     {
-        _playerOneTracker.transform.parent = _player1.transform;
-        _playerTwoTracker.transform.parent = _player2.transform;
+        _playerOneTracker.transform.parent = _player1.transform.GetChild(5);
+        _playerTwoTracker.transform.parent = _player2.transform.GetChild(5);
     }
 
     //Call this function when the actual players spawn in

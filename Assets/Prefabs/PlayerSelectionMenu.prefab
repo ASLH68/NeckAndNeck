@@ -1499,6 +1499,7 @@ GameObject:
   - component: {fileID: 1697602550365368143}
   - component: {fileID: 5057090620175122476}
   - component: {fileID: 7207579197641953876}
+  - component: {fileID: 2249428733413318918}
   m_Layer: 5
   m_Name: PlayerSelectionMenu
   m_TagString: Untagged
@@ -1612,6 +1613,20 @@ MonoBehaviour:
   - {fileID: 596643046874095566}
   - {fileID: 2183757004605376239}
   - {fileID: 8132515229799993133}
+--- !u!114 &2249428733413318918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173683994053924343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef667d94fe353147b14d4ea22f9b59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerOneTracker: {fileID: 0}
+  _playerTwoTracker: {fileID: 0}
 --- !u!1 &4215310219189629362
 GameObject:
   m_ObjectHideFlags: 0
