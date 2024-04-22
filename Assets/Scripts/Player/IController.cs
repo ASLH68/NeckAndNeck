@@ -14,6 +14,7 @@ using UnityEngine.InputSystem;
 public class IController : MonoBehaviour
 {
     private PlayerInput playerInputComponent;
+    private InputActionMap menuMap;
     protected bool canMove = false;
 
     public PlayerInput PlayerInputComponent { get => playerInputComponent; set => playerInputComponent = value; }
@@ -31,5 +32,26 @@ public class IController : MonoBehaviour
     public void ToggleControlScheme(string actionMap)
     {
         playerInputComponent.SwitchCurrentActionMap(actionMap);
+    }
+
+    public void ToggleInput(bool canGiveInput)
+    {
+        if (menuMap == null)
+        {
+            menuMap = playerInputComponent.actions.FindActionMap("Menu");
+        }
+
+        if (canGiveInput)
+        {
+            //playerInputComponent.ActivateInput();
+            Debug.Log("Action enabled");
+            menuMap.Enable();
+        }
+        else
+        {
+            //playerInputComponent.DeactivateInput();
+            Debug.Log("Action disabled");
+            menuMap.Disable();
+        }
     }
 }
