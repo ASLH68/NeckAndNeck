@@ -31,8 +31,11 @@ public class GiraffeController : IController
     public static GiraffeController firstPlayerInstance;
     public static GiraffeController secondPlayerInstance;
 
+    Animator bodyAnimator;
+
     private void Awake()
     {
+        bodyAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         PlayerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
@@ -79,13 +82,21 @@ public class GiraffeController : IController
         if (canGetHit)
         {
             canGetHit = false;
-            StartCoroutine(InvincibilityTimer());
+            //StartCoroutine(InvincibilityTimer());
+            // TODO: Play animations here
+            bodyAnimator.StartPlayback();
 
             if (hit)
             {
                 rb.AddForce(hitDirection * knockBackStrength);
             }
         }
+    }
+
+    public void EndInvincibility()
+    {
+        Debug.Log("IFramesOver");
+        canGetHit = true;
     }
 
     private IEnumerator InvincibilityTimer()
