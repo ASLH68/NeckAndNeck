@@ -1,9 +1,17 @@
+/*****************************************************************************
+// File Name :         GiraffeController.cs
+// Author :            Nick Grinstead
+// Creation Date :     04/10/24
+//
+// Brief Description : Takes player inputs for controlling the giraffe's body.
+*****************************************************************************/
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GiraffeController : MonoBehaviour
+public class GiraffeController : IController
 {
     [SerializeField] float moveSpeed;
     float xAxis, zAxis;
@@ -26,6 +34,7 @@ public class GiraffeController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        PlayerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
 
         if (firstPlayerInstance == null)
@@ -52,6 +61,16 @@ public class GiraffeController : MonoBehaviour
 
             Vector3 correctedDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             rb.velocity = correctedDirection.normalized * moveSpeed * Time.deltaTime;
+
+            if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
+            {
+                GetComponent<FMODUnity.StudioEventEmitter>().Play();
+            }
+            
+        }
+        else
+        {
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
         }
     }
 
@@ -78,11 +97,13 @@ public class GiraffeController : MonoBehaviour
 
     public void OnMoveX(InputValue context)
     {
-        xAxis = context.Get<float>();
+        if (canMove)
+            xAxis = context.Get<float>();
     }
 
     public void OnMoveZ(InputValue context)
     {
-        zAxis = context.Get<float>();
+        if (canMove)
+            zAxis = context.Get<float>();
     }
 }

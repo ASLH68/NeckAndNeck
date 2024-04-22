@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2800101156355835406}
   - component: {fileID: 8413472732291979427}
   - component: {fileID: 7401979186829493877}
+  - component: {fileID: 2488603614605369389}
   m_Layer: 0
   m_Name: Front Leg Left
   m_TagString: Untagged
@@ -105,6 +106,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &2488603614605369389
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429932849570762018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c09108047f0bb641a4535e1de7dd4cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2089239238879891014
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +139,7 @@ GameObject:
   - component: {fileID: 6341240810985666003}
   - component: {fileID: 356592033742846295}
   - component: {fileID: 6972361568968065025}
+  - component: {fileID: 1860982260646021597}
   m_Layer: 0
   m_Name: Back Leg Right
   m_TagString: Untagged
@@ -210,6 +233,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &1860982260646021597
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089239238879891014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d8738d2e313ebd4394fb47296ca9236, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3784394616228101910
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +269,7 @@ GameObject:
   - component: {fileID: 1573598498774068978}
   - component: {fileID: 5457930054983885388}
   - component: {fileID: 676922366905528469}
+  - component: {fileID: 3062157415722223023}
   m_Layer: 0
   m_Name: Neck 2
   m_TagString: Untagged
@@ -357,6 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &676922366905528469
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -459,6 +505,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &3062157415722223023
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784394616228101910}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fe8f936651941e4b9c3bdd09cdd9e24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4945365571989674425
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +541,7 @@ GameObject:
   - component: {fileID: 7502043618883197493}
   - component: {fileID: 2762609639393878361}
   - component: {fileID: 4202299355209918780}
+  - component: {fileID: 8344249809465026206}
   m_Layer: 0
   m_Name: Neck 3
   m_TagString: Untagged
@@ -606,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &4202299355209918780
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -708,6 +777,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &8344249809465026206
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945365571989674425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad1c1de1bba23474190861b7e2dd2f13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4987521887823614285
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +813,8 @@ GameObject:
   - component: {fileID: 2700199387469782422}
   - component: {fileID: 5336599433473033509}
   - component: {fileID: 7596013444052284653}
+  - component: {fileID: 6753159531447438250}
+  - component: {fileID: 3714026670758809048}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -892,6 +984,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1800
   knockBackStrength: 150000
+--- !u!114 &6753159531447438250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987521887823614285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 934866772
+      Data2: 1292071636
+      Data3: -560279371
+      Data4: -1660496205
+    Path: event:/Walking
+  Event: 
+  PlayEvent: 0
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 60
+--- !u!95 &3714026670758809048
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987521887823614285}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e90c58224d3ddc2469e89eb603568ab8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5223482644250006116
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +1053,7 @@ GameObject:
   - component: {fileID: 6956925168828772457}
   - component: {fileID: 7147280712075479495}
   - component: {fileID: 8060041597985832286}
+  - component: {fileID: 8848756174667256181}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1085,6 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &8060041597985832286
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1187,6 +1333,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &8848756174667256181
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223482644250006116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c41fd419cff41a8449ca7a3797bc0785, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5245979501054289355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5487996796168976869}
   - component: {fileID: 1626168650057215473}
+  - component: {fileID: 5688850262390373641}
   m_Layer: 0
   m_Name: UpdatedGiraffe
   m_TagString: Untagged
@@ -1237,6 +1405,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a135e4405f7dcf741b2251b971c2f731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5688850262390373641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245979501054289355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 458487974
+      Data2: 1331459726
+      Data3: -950192993
+      Data4: -926234318
+    Path: event:/On Hit- Light Cymbal
+  Event: 
+  PlayEvent: 0
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5776587932257302547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1448,7 @@ GameObject:
   - component: {fileID: 2655541702260298803}
   - component: {fileID: 7332671273786934552}
   - component: {fileID: 1688113889411283953}
+  - component: {fileID: 7285182772076346750}
   m_Layer: 0
   m_Name: Front Leg Right
   m_TagString: Untagged
@@ -1342,6 +1542,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &7285182772076346750
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776587932257302547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1e00ca4ad4738a49819d24d52a79ced, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6175987582558972673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1578,7 @@ GameObject:
   - component: {fileID: 2519447874789614284}
   - component: {fileID: 1318509584908516668}
   - component: {fileID: 1958763589452009026}
+  - component: {fileID: 5286304232902792877}
   m_Layer: 0
   m_Name: Neck 1
   m_TagString: Untagged
@@ -1489,6 +1711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &1958763589452009026
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1591,6 +1814,27 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &5286304232902792877
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175987582558972673}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc2fbe64dbd0ac240af128c1646db5d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8212600560230688923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,6 +1847,7 @@ GameObject:
   - component: {fileID: 4964053781384239402}
   - component: {fileID: 7554274416062999756}
   - component: {fileID: 8871118530086683597}
+  - component: {fileID: 8386909040255648769}
   m_Layer: 0
   m_Name: Back Leg Left
   m_TagString: Untagged
@@ -1696,6 +1941,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8386909040255648769
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212600560230688923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e52c4f6b39ef5d64cace05be7c4489a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8781216825073917574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1977,7 @@ GameObject:
   - component: {fileID: 1526956991405319849}
   - component: {fileID: 5633499250175714554}
   - component: {fileID: 6290551933449748649}
+  - component: {fileID: 6207676122244455570}
   m_Layer: 0
   m_Name: Neck 4
   m_TagString: Untagged
@@ -1843,6 +2110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b040af85a59d3ec4584a80acd925df0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSFX: {fileID: 0}
 --- !u!153 &6290551933449748649
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1945,3 +2213,24 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &6207676122244455570
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781216825073917574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ea51bd84e5c3ff4991eea824c886ea8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
