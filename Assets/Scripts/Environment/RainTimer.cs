@@ -24,17 +24,16 @@ public class RainTimer : MonoBehaviour
     // Referenced objs
     [SerializeField] PhysicMaterial _boatMaterial;
     [SerializeField] float _rainyFriction;
+    [SerializeField] ParticleSystem _rainParticles;
+    [SerializeField] Light _light;
+
+    // Misc
+    float _rainMultiplier;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(RainControlTimer());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /// <summary>
@@ -100,9 +99,16 @@ public class RainTimer : MonoBehaviour
     /// </summary>
     public void StartRain()
     {
+        // Vars
+        var emission = _rainParticles.emission;
+
         // Changes boat friction
         _boatMaterial.dynamicFriction = _rainyFriction;
         _boatMaterial.staticFriction = _rainyFriction;
+
+        // Changes visuals
+        emission.rateOverTime = emission.rateOverTime.constant * 5;
+        _light.intensity = 0;
     }
 
     /// <summary>
@@ -110,9 +116,16 @@ public class RainTimer : MonoBehaviour
     /// </summary>
     void StopRain()
     {
+        // Vars
+        var emission = _rainParticles.emission;
+
         // Resets friction
         _boatMaterial.dynamicFriction = .6f;
         _boatMaterial.staticFriction = .6f;
+
+        // Changes Visuals
+        emission.rateOverTime = emission.rateOverTime.constant / 5;
+        _light.intensity = 2;
 
         // Increases duration of future rains
         _rainDuration += 5;
