@@ -33,6 +33,11 @@ public class RainTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void StartRainCycle()
+    {
         StartCoroutine(RainControlTimer());
     }
 
