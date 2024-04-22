@@ -15,10 +15,17 @@ using UnityEngine.SceneManagement;
 
 public class EndScreenController : MonoBehaviour
 {
-    #region Private Variables
+    #region Serialized Vars
 
+    [SerializeField] float _endDelay;
     [SerializeField] private GameObject _menuObjects;
     [SerializeField] private TextMeshProUGUI _winText;
+
+    #endregion
+
+    #region Private Variables
+
+    private int _winnerNum;
 
     #endregion
 
@@ -51,17 +58,29 @@ public class EndScreenController : MonoBehaviour
     {
         if (isEnabling)
         {
-            WinTrigger.OnPlayerDied += SetWinText;
+            WinTrigger.OnPlayerDied += BeginEndTransition;
         }
         else
         {
-            WinTrigger.OnPlayerDied -= SetWinText;
+            WinTrigger.OnPlayerDied -= BeginEndTransition;
         }
     }
 
     #endregion
 
     #region UI Functionality
+
+    private void BeginEndTransition(int playerNum)
+    {
+        _winnerNum = playerNum;
+        StartCoroutine(EnableEnding());
+    }
+
+    private IEnumerator EnableEnding()
+    {
+        yield return new WaitForSeconds(_endDelay);
+        SetWinText(_winnerNum);  
+    }
 
     /// <summary>
     /// Enables and disables end screen visibility
