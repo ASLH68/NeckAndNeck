@@ -32,6 +32,8 @@ public class JoinPlayers : MonoBehaviour
     bool[] isCharacterAvailable = { true, true, true, true };
     int gamepadIndex = 0;
 
+    Track camTracker;
+
     private void Start()
     {
         GameObject temp = Instantiate(playerPrefab);
@@ -41,6 +43,10 @@ public class JoinPlayers : MonoBehaviour
         temp = Instantiate(playerPrefab);
         controllerArray.Add(temp.GetComponentInChildren<HeadController>());
         controllerArray.Add(temp.GetComponentInChildren<GiraffeController>());
+
+        camTracker = GetComponent<Track>();
+        camTracker.SetPlayers();
+        camTracker.TrackPlayer();
 
         gamepads = Gamepad.all.ToArray();
 
