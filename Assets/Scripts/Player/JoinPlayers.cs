@@ -72,7 +72,7 @@ public class JoinPlayers : MonoBehaviour
             text[gamepadIndex].SetActive(true);
 
             gamepadOrder[characterIndex] = gamepadIndex;
-            controllerArray[gamepadIndex].ToggleInput(false);
+            //controllerArray[gamepadIndex].ToggleInput(false);
             gamepadIndex++;
 
             if (gamepadIndex >= Gamepad.all.Count)
@@ -88,7 +88,9 @@ public class JoinPlayers : MonoBehaviour
                 //controllerArray[gamepadIndex - 1].ToggleControlScheme("SinglePlayer");
                 
                 //controllerArray[gamepadIndex].ToggleControlScheme("Menu");
-                controllerArray[gamepadIndex].ToggleInput(true);
+                //controllerArray[gamepadIndex].ToggleInput(true);
+                controllerArray[0].SwapGamepad(gamepadIndex);
+                controllerArray[gamepadIndex].SwapGamepad(gamepadIndex - 1);
             }
         }
     }
