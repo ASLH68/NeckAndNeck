@@ -44,12 +44,16 @@ public class JoinPlayers : MonoBehaviour
         controllerArray.Add(temp.GetComponentInChildren<HeadController>());
         controllerArray.Add(temp.GetComponentInChildren<GiraffeController>());
 
+        for (int i = 0; i < controllerArray.Count; ++i)
+        {
+            controllerArray[i].DeactivateCharacter();
+        }
+
         camTracker = GetComponent<Track>();
         camTracker.SetPlayers();
         camTracker.TrackPlayer();
 
         gamepads = Gamepad.all.ToArray();
-
 
         //controllerArray[0].ToggleControlScheme("Menu");
         controllerArray[0].ToggleInput(true);

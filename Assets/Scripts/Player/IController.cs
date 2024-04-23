@@ -15,7 +15,7 @@ public class IController : MonoBehaviour
 {
     private PlayerInput playerInputComponent;
     private InputActionMap menuMap;
-    protected bool canMove = false;
+    protected bool canMove = true;
 
     public PlayerInput PlayerInputComponent { get => playerInputComponent; set => playerInputComponent = value; }
 
@@ -27,6 +27,11 @@ public class IController : MonoBehaviour
     public void ActivateCharacter()
     {
         canMove = true;
+    }
+
+    public void DeactivateCharacter()
+    {
+        canMove = false;
     }
 
     public void ToggleControlScheme(string actionMap)
