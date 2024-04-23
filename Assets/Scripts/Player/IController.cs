@@ -48,14 +48,10 @@ public class IController : MonoBehaviour
 
         if (canGiveInput)
         {
-            //playerInputComponent.ActivateInput();
-            Debug.Log("Action enabled");
             menuMap.Enable();
         }
         else
         {
-            //playerInputComponent.DeactivateInput();
-            Debug.Log("Action disabled");
             menuMap.Disable();
         }
     }
