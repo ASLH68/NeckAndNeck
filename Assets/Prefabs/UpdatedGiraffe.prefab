@@ -984,6 +984,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1800
   knockBackStrength: 150000
+  weakKnockBackStrength: 75000
+  hitFlashAnimators:
+  - {fileID: 8848756174667256181}
+  - {fileID: 5286304232902792877}
+  - {fileID: 3062157415722223023}
+  - {fileID: 8344249809465026206}
+  - {fileID: 6207676122244455570}
+  - {fileID: 3714026670758809048}
+  - {fileID: 7285182772076346750}
+  - {fileID: 1860982260646021597}
+  - {fileID: 8386909040255648769}
+  - {fileID: 2488603614605369389}
 --- !u!114 &6753159531447438250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,7 +1003,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4987521887823614285}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 

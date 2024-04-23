@@ -25,6 +25,7 @@ public class GiraffeCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
         {
+
             _hitSFX.Play();
             if (player1 == null || player2 == null)
             {
@@ -36,31 +37,36 @@ public class GiraffeCollision : MonoBehaviour
             float selfVelocity = Mathf.Abs(rb.velocity.magnitude);
             float otherVelocity = Mathf.Abs(collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude);
 
-            if (Mathf.Abs(selfVelocity - otherVelocity) > 3f)
+
+            float knockBackModifier = Mathf.Abs(selfVelocity - otherVelocity) / 3f;
+            if (knockBackModifier < 0.33f)
+                knockBackModifier = 0.33f;
+            else if (knockBackModifier > 1.0f)
+                knockBackModifier = 1.0f;
+
+            if (collision.gameObject.CompareTag("Player1"))
             {
-                if (collision.gameObject.CompareTag("Player1"))
-                {   
-                    hitVector = player1.position - player2.position;
-                    hitVector.Normalize();
+                hitVector = player1.position - player2.position;
+                hitVector.Normalize();
 
-                    if (selfVelocity < otherVelocity)
-                    {
-                        GiraffeController.secondPlayerInstance.GotHit(true, hitVector);
-                        GiraffeController.firstPlayerInstance.GotHit(false);
-                    }
-                }
-                else if (collision.gameObject.CompareTag("Player2"))
-                {   
-                    hitVector = player2.position - player1.position;
-                    hitVector.Normalize();
-
-                    if (selfVelocity < otherVelocity)
-                    {
-                        GiraffeController.firstPlayerInstance.GotHit(true, hitVector);
-                        GiraffeController.secondPlayerInstance.GotHit(false);
-                    }
+                if (selfVelocity < otherVelocity)
+                {
+                    GiraffeController.secondPlayerInstance.GotHit(true, knockBackModifier, hitVector);
+                    GiraffeController.firstPlayerInstance.GotHit(false);
                 }
             }
+            else if (collision.gameObject.CompareTag("Player2"))
+            {   
+                hitVector = player2.position - player1.position;
+                hitVector.Normalize();
+
+                if (selfVelocity < otherVelocity)
+                {
+                    GiraffeController.firstPlayerInstance.GotHit(true, knockBackModifier, hitVector);
+                    GiraffeController.secondPlayerInstance.GotHit(false);
+                }
+            }
+            
         }
     }
 }
