@@ -134,7 +134,6 @@ public class GiraffeController : IController
                 }
 
             }
-            Debug.Log(knockBackModifier * knockBackStrength);
 
             rb.AddForce(hitDirection * knockBackStrength * knockBackModifier);
         }
