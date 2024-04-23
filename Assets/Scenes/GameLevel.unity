@@ -5274,6 +5274,52 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1250470869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250470871}
+  - component: {fileID: 1250470870}
+  m_Layer: 0
+  m_Name: LightningSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1250470870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250470869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc0d6decd7a4c843aae514d82f48aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightning: {fileID: 5214602803384584477, guid: dc5bbec7f42354c489b4201340e11e68,
+    type: 3}
+--- !u!4 &1250470871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250470869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.1, y: 18.105852, z: 23.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1263610016
 Mesh:
   m_ObjectHideFlags: 0
@@ -14094,12 +14140,12 @@ PrefabInstance:
     - target: {fileID: 2507649202251893945, guid: 2ae8cd3f637c4214cb314155fb5df4b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2507649202251893945, guid: 2ae8cd3f637c4214cb314155fb5df4b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.95
+      value: -5.34
       objectReference: {fileID: 0}
     - target: {fileID: 2507649202251893945, guid: 2ae8cd3f637c4214cb314155fb5df4b5,
         type: 3}
@@ -14241,6 +14287,7 @@ SceneRoots:
   - {fileID: 3208094479932931599}
   - {fileID: 1486410182}
   - {fileID: 2057458798}
+  - {fileID: 1250470871}
   - {fileID: 403427559}
   - {fileID: 7498213151182481966}
   - {fileID: 1799524311}
