@@ -37,7 +37,6 @@ public class GiraffeCollision : MonoBehaviour
             float selfVelocity = Mathf.Abs(rb.velocity.magnitude);
             float otherVelocity = Mathf.Abs(collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude);
 
-
             float knockBackModifier = Mathf.Abs(selfVelocity - otherVelocity) / 3f;
             if (knockBackModifier < 0.33f)
                 knockBackModifier = 0.33f;
