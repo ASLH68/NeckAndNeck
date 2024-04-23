@@ -36,7 +36,7 @@ public class GiraffeCollision : MonoBehaviour
             float selfVelocity = Mathf.Abs(rb.velocity.magnitude);
             float otherVelocity = Mathf.Abs(collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude);
 
-            if (Mathf.Abs(selfVelocity - otherVelocity) > 3f)
+            if (Mathf.Abs(selfVelocity - otherVelocity) > 1f)
             {
                 if (collision.gameObject.CompareTag("Player1"))
                 {   
