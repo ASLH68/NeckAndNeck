@@ -194,8 +194,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.013953488
-        value: 0.34478405
+        time: 0.009661828
+        value: 0.7976193
         inSlope: -0.056639094
         outSlope: -0.056639094
         tangentMode: 0
@@ -336,7 +336,7 @@ Transform:
   m_GameObject: {fileID: 76206600}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.782, y: 3.687, z: 0.01}
+  m_LocalPosition: {x: -0.16, y: 0.88, z: 3.79}
   m_LocalScale: {x: 1.1, y: 0.4148, z: 0.5964}
   m_ConstrainProportionsScale: 0
   m_Children: []
