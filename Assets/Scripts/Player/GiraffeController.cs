@@ -31,6 +31,8 @@ public class GiraffeController : IController
     public static GiraffeController firstPlayerInstance;
     public static GiraffeController secondPlayerInstance;
 
+    [SerializeField] Animator[] hitFlashAnimators;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -74,24 +76,72 @@ public class GiraffeController : IController
         }
     }
 
-    public void GotHit(bool hit, Vector3 hitDirection = new Vector3())
+    public void GotHit(bool hit, float knockBackModifier = 1.0f, Vector3 hitDirection = new Vector3())
     {
-        if (canGetHit)
+        if (canGetHit && hit == false)
         {
             canGetHit = false;
-            StartCoroutine(InvincibilityTimer());
-
-            if (hit)
-            {
-                rb.AddForce(hitDirection * knockBackStrength);
-            }
+            Invoke("EndInvincibility", 0.2f);
         }
+
+        if (canGetHit && hit)
+        {
+            canGetHit = false;
+
+            for (int i = 0; i < hitFlashAnimators.Length; ++i)
+            {
+                switch (i)
+                {
+                    case 0:
+                        hitFlashAnimators[i].Play("HeadHitFlash", -1, 0f);
+                        break;
+
+                    case 1:
+                        hitFlashAnimators[i].Play("Neck1HitFlash", -1, 0f);
+                        break;
+
+                    case 2:
+                        hitFlashAnimators[i].Play("Neck2HitFlash", -1, 0f);
+                        break;
+
+                    case 3:
+                        hitFlashAnimators[i].Play("Neck3HitFlash", -1, 0f);
+                        break;
+
+                    case 4:
+                        hitFlashAnimators[i].Play("Neck4HitFlash", -1, 0f);
+                        break;
+
+                    case 5:
+                        hitFlashAnimators[i].Play("BodyHitFlash", -1, 0f);
+                        break;
+
+                    case 6:
+                        hitFlashAnimators[i].Play("FrontLegRightHitFlash", -1, 0f);
+                        break;
+
+                    case 7:
+                        hitFlashAnimators[i].Play("BackLegRightHitFlash", -1, 0f);
+                        break;
+
+                    case 8:
+                        hitFlashAnimators[i].Play("BackLegLeftHitFlash", -1, 0f);
+                        break;
+
+                    case 9:
+                        hitFlashAnimators[i].Play("FrontLegLeftHitFlash", -1, 0f);
+                        break;
+                }
+
+            }
+
+            rb.AddForce(hitDirection * knockBackStrength * knockBackModifier);
+        }
+        
     }
 
-    private IEnumerator InvincibilityTimer()
+    public void EndInvincibility()
     {
-        yield return new WaitForSeconds(0.5f);
-
         canGetHit = true;
     }
 
