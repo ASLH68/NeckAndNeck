@@ -44,12 +44,16 @@ public class JoinPlayers : MonoBehaviour
         controllerArray.Add(temp.GetComponentInChildren<HeadController>());
         controllerArray.Add(temp.GetComponentInChildren<GiraffeController>());
 
+        for (int i = 0; i < controllerArray.Count; ++i)
+        {
+            controllerArray[i].DeactivateCharacter();
+        }
+
         camTracker = GetComponent<Track>();
         camTracker.SetPlayers();
         camTracker.TrackPlayer();
 
         gamepads = Gamepad.all.ToArray();
-
 
         //controllerArray[0].ToggleControlScheme("Menu");
         controllerArray[0].ToggleInput(true);
@@ -122,6 +126,7 @@ public class JoinPlayers : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         StartCoroutine(SelectButton(firstButton));
 
+        controllerArray[0].SwapGamepad(0);
         gamepadIndex = 0;
         //controllerArray[0].SwapGamepad(gamepadIndex);
 
