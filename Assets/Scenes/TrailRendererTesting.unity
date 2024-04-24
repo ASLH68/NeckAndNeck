@@ -185,7 +185,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.17
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -194,8 +194,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0027782023
-        value: 0.30626547
+        time: 0.0055871904
+        value: 0.40119582
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -297,7 +297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e255ac39e75c51746ae17d3026f57f25, type: 2}
+  - {fileID: 2100000, guid: 26bd88a630b7270438a76990a6dac3e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,7 +336,7 @@ Transform:
   m_GameObject: {fileID: 76206600}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.05, y: 3.8, z: 0.01}
+  m_LocalPosition: {x: -1.782, y: 3.687, z: 0.01}
   m_LocalScale: {x: 1.1, y: 0.4148, z: 0.5964}
   m_ConstrainProportionsScale: 0
   m_Children: []
