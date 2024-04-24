@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class UpdatePlayerLayer : MonoBehaviour
 {
+    public Material player2Mat;
+
     private void Awake()
     {
         int numPlayers = PlayerInputManager.instance.playerCount;
@@ -34,11 +36,14 @@ public class UpdatePlayerLayer : MonoBehaviour
             {
                 child.tag = "Player2";
                 child.gameObject.layer = 7;
+                child.GetComponent<MeshRenderer>().material = player2Mat;;
+
 
                 foreach (Transform secondChild in child.transform)
                 {
                     secondChild.tag = "Player2";
                     secondChild.gameObject.layer = 7;
+                    secondChild.GetComponent<MeshRenderer>().material = player2Mat;
                 }
             }
         }

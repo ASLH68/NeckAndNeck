@@ -1123,7 +1123,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 3000
+    maxNumParticles: 10000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5766,6 +5766,56 @@ Transform:
   m_LocalPosition: {x: 216.6, y: -13.8, z: -4.3}
   m_LocalScale: {x: 72, y: 26.101143, z: 72}
   m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505270140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505270142}
+  - component: {fileID: 1505270141}
+  m_Layer: 0
+  m_Name: RainManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1505270141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505270140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec28cd1562827e143991f2a887b036cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _breakDuration: 15
+  _rainChance: 25
+  _boatMaterial: {fileID: 13400000, guid: 7cb2cebf261e279429862f0ec18fe7fc, type: 2}
+  _rainyFriction: 0
+  _rainParticles: {fileID: 937868903}
+  _light: {fileID: 410087040}
+--- !u!4 &1505270142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505270140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14136,6 +14186,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1263610016}
+    - target: {fileID: 5959609276622055714, guid: 2ae8cd3f637c4214cb314155fb5df4b5,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 7cb2cebf261e279429862f0ec18fe7fc,
+        type: 2}
     - target: {fileID: 8120554113812329574, guid: 2ae8cd3f637c4214cb314155fb5df4b5,
         type: 3}
       propertyPath: m_Mesh
@@ -14230,3 +14286,4 @@ SceneRoots:
   - {fileID: 7498213151182481966}
   - {fileID: 1799524311}
   - {fileID: 1406777410}
+  - {fileID: 1505270142}

@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e9c4fcfdd6c7c40b45c3083b1d8c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _endDelay: 3
   _menuObjects: {fileID: 5882783701999203059}
   _winText: {fileID: 8562731073419448156}
 --- !u!1 &5882783701999203059
