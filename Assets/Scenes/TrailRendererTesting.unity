@@ -164,7 +164,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f5e1f26faf538614b9bc3c53705f38e3, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,14 +194,14 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0055871904
-        value: 0.40119582
-        inSlope: 0
-        outSlope: 0
+        time: 0.013953488
+        value: 0.34478405
+        inSlope: -0.056639094
+        outSlope: -0.056639094
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.1116279
       - serializedVersion: 3
         time: 1
         value: 0
@@ -217,7 +217,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -241,12 +241,12 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 1
+    alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
