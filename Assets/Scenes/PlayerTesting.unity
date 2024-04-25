@@ -1065,6 +1065,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 5471439944199726966, guid: 9b9ec3611bc21d54a9ed331292b1ff4d,
+        type: 3}
     - target: {fileID: 1429932849570762018, guid: b1e2914f657c8cb47953fc0efe221855,
         type: 3}
       propertyPath: m_Layer

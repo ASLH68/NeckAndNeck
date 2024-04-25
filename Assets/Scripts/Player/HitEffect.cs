@@ -10,10 +10,10 @@ public class HitEffect : MonoBehaviour
     {
        if (collision.collider.CompareTag("Player1") || collision.collider.CompareTag("Player2"))
         {
-            Hit();
+            Hit(collision.GetContact(0).point);
         }
     }
-    void Hit()
+    void Hit(Vector3 position)
     {
         GameObject hitObject = Instantiate(hitEffect, position, Quaternion.identity);
         hitObject.GetComponent<ParticleSystem>().Play();
