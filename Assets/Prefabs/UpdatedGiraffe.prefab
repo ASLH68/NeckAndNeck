@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitSFX: {fileID: 0}
-  hitVFX: {fileID: 2981294936561591681, guid: 9b9ec3611bc21d54a9ed331292b1ff4d, type: 3}
+  hitVFX: {fileID: 2260830091141832517, guid: 68be7d1facafe14478dc9048f9f58a99, type: 3}
 --- !u!153 &676922366905528469
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitSFX: {fileID: 0}
-  hitVFX: {fileID: 2981294936561591681, guid: 9b9ec3611bc21d54a9ed331292b1ff4d, type: 3}
+  hitVFX: {fileID: 2260830091141832517, guid: 68be7d1facafe14478dc9048f9f58a99, type: 3}
 --- !u!153 &4202299355209918780
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitSFX: {fileID: 0}
-  hitVFX: {fileID: 2981294936561591681, guid: 9b9ec3611bc21d54a9ed331292b1ff4d, type: 3}
+  hitVFX: {fileID: 2260830091141832517, guid: 68be7d1facafe14478dc9048f9f58a99, type: 3}
 --- !u!153 &8060041597985832286
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitSFX: {fileID: 0}
-  hitVFX: {fileID: 2981294936561591681, guid: 9b9ec3611bc21d54a9ed331292b1ff4d, type: 3}
+  hitVFX: {fileID: 2260830091141832517, guid: 68be7d1facafe14478dc9048f9f58a99, type: 3}
 --- !u!153 &1958763589452009026
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitSFX: {fileID: 0}
-  hitVFX: {fileID: 2981294936561591681, guid: 9b9ec3611bc21d54a9ed331292b1ff4d, type: 3}
+  hitVFX: {fileID: 2260830091141832517, guid: 68be7d1facafe14478dc9048f9f58a99, type: 3}
 --- !u!153 &6290551933449748649
 ConfigurableJoint:
   m_ObjectHideFlags: 0

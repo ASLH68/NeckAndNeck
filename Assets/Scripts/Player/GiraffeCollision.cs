@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class GiraffeCollision : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GiraffeCollision : MonoBehaviour
     Vector3 hitVector;
 
     [SerializeField] FMODUnity.StudioEventEmitter _hitSFX;
-    [SerializeField] GameObject hitVFX;
+    [SerializeField] VisualEffect hitVFX;
 
     private void Awake()
     {
@@ -78,8 +79,8 @@ public class GiraffeCollision : MonoBehaviour
         if (VFXController.canHitVFX)
         {
             VFXController.canHitVFX = false;
-            GameObject hitObject = Instantiate(hitVFX, position, Quaternion.identity);
-            hitObject.GetComponent<ParticleSystem>().Play();
+            VisualEffect hitObject = Instantiate(hitVFX, position, Quaternion.identity);
+            hitObject.Play();
             yield return new WaitForSeconds(1);
             VFXController.canHitVFX = true;
         }
