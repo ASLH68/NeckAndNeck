@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class GiraffeCollision : MonoBehaviour
 {
@@ -10,6 +13,8 @@ public class GiraffeCollision : MonoBehaviour
     Transform player2;
     Vector3 hitVector;
 
+    [SerializeField] FMODUnity.StudioEventEmitter _hitSFX;
+    [SerializeField] VisualEffect hitVFX;
     public static Action OnHit;
 
     private void Awake()
@@ -21,7 +26,8 @@ public class GiraffeCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
         {
-            //OnHit?.Invoke();
+            StartCoroutine(Hit(collision.GetContact(0).point));
+
             if (player1 == null || player2 == null)
             {
                 player1 = GiraffeController.secondPlayerInstance.transform;
@@ -61,6 +67,18 @@ public class GiraffeCollision : MonoBehaviour
                 }
             }
             
+        }
+    }
+
+    IEnumerator Hit(Vector3 position)
+    {
+        if (VFXController.canHitVFX)
+        {
+            VFXController.canHitVFX = false;
+            VisualEffect hitObject = Instantiate(hitVFX, position, Quaternion.identity);
+            hitObject.Play();
+            yield return new WaitForSeconds(1);
+            VFXController.canHitVFX = true;
         }
     }
 }
