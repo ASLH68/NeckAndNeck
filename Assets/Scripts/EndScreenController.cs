@@ -97,7 +97,17 @@ public class EndScreenController : MonoBehaviour
     /// <param name="playerNum">Num player who won</param>
     private void SetWinText(int playerNum)
     {
-        _winText.text = "Player " + playerNum + " Wins!";
+        switch(playerNum)
+        {
+            case 1:
+                _winText.text = "Brown Team Victory!";
+                break;
+            case 2:
+                _winText.text = "Yellow Team Victory!";
+                break;
+            default:
+                break;
+        }
         ShowEndScreen(true);
     }
 
