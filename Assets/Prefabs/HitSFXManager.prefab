@@ -46,6 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitSFXCooldown: 2
+  _hitSFXEventRef:
+    Guid:
+      Data1: 458487974
+      Data2: 1331459726
+      Data3: -950192993
+      Data4: -926234318
+    Path: event:/On Hit- Light Cymbal
+  _pitchMin: 0.8
+  _pitchMax: 2.8
 --- !u!114 &6627466720870036585
 MonoBehaviour:
   m_ObjectHideFlags: 0

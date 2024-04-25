@@ -6,6 +6,7 @@
 // Brief Description : Takes player inputs for controlling the giraffe's body.
 *****************************************************************************/
 using FMODUnity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,8 @@ public class GiraffeController : IController
     public static GiraffeController secondPlayerInstance;
 
     [SerializeField] Animator[] hitFlashAnimators;
+
+    public static Action OnHit;
 
     private void Awake()
     {
@@ -86,6 +89,7 @@ public class GiraffeController : IController
 
         if (canGetHit && hit)
         {
+            OnHit?.Invoke();
             canGetHit = false;
 
             for (int i = 0; i < hitFlashAnimators.Length; ++i)

@@ -1,56 +1,60 @@
+using FMOD;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class HitSFXController : MonoBehaviour
 {
     #region Serialized Variables
 
     [SerializeField] private float _hitSFXCooldown;
+    [SerializeField] private FMODUnity.EventReference _hitSFXEventRef;
+    [SerializeField] private float _pitchMin;
+    [SerializeField] private float _pitchMax;
 
     #endregion
 
     #region Private Variables
 
     private FMODUnity.StudioEventEmitter _hitSFX;
-    private IEnumerator _cooldownCoroutine;
-    private bool _canPlaySFX = false;
+    private FMOD.Studio.EventInstance _hitSFXEventInstance;
 
     #endregion
 
     private void Start()
     {
+        _hitSFXEventInstance = FMODUnity.RuntimeManager.CreateInstance(_hitSFXEventRef);
+        _hitSFXEventInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
         _hitSFX = GetComponent<FMODUnity.StudioEventEmitter>();
-        _cooldownCoroutine = HitSFXCooldown();
     }
 
     private void OnEnable()
     {
-        GiraffeCollision.OnHit += PlayHitSFX;
+        GiraffeController.OnHit += PlayHitSFX;
     }
     private void OnDisable()
     {
-        GiraffeCollision.OnHit -= PlayHitSFX;
+        GiraffeController.OnHit -= PlayHitSFX;
     }
 
     private void PlayHitSFX()
     {
-        if(_canPlaySFX)
-        {
-            StartCoroutine(_cooldownCoroutine);
-        }
+        //_hitSFX.Play();
+        _hitSFXEventInstance.start();
+        PitchShift();    
     }
 
     /// <summary>
-    /// Plays an SFX then has a cooldown period before can play again
+    /// Sets the pitch of the hit SFX
     /// </summary>
-    /// <returns></returns>
-    private IEnumerator HitSFXCooldown()
+    private void PitchShift()
     {
-        _canPlaySFX = false;
-        _hitSFX.Play();
-        yield return new WaitForSeconds(_hitSFXCooldown);
-        _canPlaySFX = true;
+        float newPitch = Random.Range(_pitchMin, _pitchMax);
+        UnityEngine.Debug.Log(newPitch);
+        _hitSFXEventInstance.setPitch(newPitch);
+        _hitSFX.EventReference = _hitSFXEventRef;
     }
 }

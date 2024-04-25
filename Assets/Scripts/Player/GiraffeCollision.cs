@@ -21,7 +21,7 @@ public class GiraffeCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
         {
-            OnHit?.Invoke();
+            //OnHit?.Invoke();
             if (player1 == null || player2 == null)
             {
                 player1 = GiraffeController.secondPlayerInstance.transform;
