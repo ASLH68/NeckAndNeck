@@ -21,6 +21,7 @@ public class GiraffeController : IController
     Transform cameraTrans;
     
     Rigidbody rb;
+    bool motionFrozen = false;
 
     Vector3 firstPosition = new Vector3(2.4f, 18.52f, -6f);
     Vector3 secondPosition = new Vector3(2.4f, 18.52f, -40f);
@@ -57,12 +58,20 @@ public class GiraffeController : IController
 
         if (moveDirection.magnitude >= 0.1f)
         {
+            if (motionFrozen)
+            {
+                motionFrozen = false;
+                rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            }
+
             float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + cameraTrans.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle - 90f, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 correctedDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.velocity = correctedDirection.normalized * moveSpeed * Time.deltaTime;
+            Vector3 newVelocity = correctedDirection.normalized * moveSpeed * Time.deltaTime;
+            newVelocity.y = rb.velocity.y;
+            rb.velocity = newVelocity;
 
             if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
             {
@@ -72,6 +81,15 @@ public class GiraffeController : IController
         }
         else
         {
+            if (canGetHit && motionFrozen == false)
+            {
+                motionFrozen = true;
+                rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | 
+                    RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+                Vector3 newVelocity = Vector3.zero;
+                newVelocity.y = rb.velocity.y;
+                rb.velocity = newVelocity;
+            }
             GetComponent<FMODUnity.StudioEventEmitter>().Stop();
         }
     }
@@ -86,6 +104,9 @@ public class GiraffeController : IController
 
         if (canGetHit && hit)
         {
+            motionFrozen = false;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
             canGetHit = false;
 
             for (int i = 0; i < hitFlashAnimators.Length; ++i)
