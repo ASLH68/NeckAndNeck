@@ -362,7 +362,6 @@ MonoBehaviour:
   _endDelay: 3.75
   _menuObjects: {fileID: 5741871271474493314}
   _winText: {fileID: 3787594031060234754}
-  _firstSelectedButton: {fileID: 1608972439785106758}
   _boundsSFX: {fileID: 6533478249969204636}
   _victorSFX: {fileID: 170703579322820287}
 --- !u!114 &6533478249969204636
