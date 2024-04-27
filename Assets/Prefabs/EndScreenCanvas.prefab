@@ -255,6 +255,8 @@ GameObject:
   - component: {fileID: 9152250705872240078}
   - component: {fileID: 7483712136504230946}
   - component: {fileID: 8184829380047598611}
+  - component: {fileID: 6533478249969204636}
+  - component: {fileID: 170703579322820287}
   m_Layer: 5
   m_Name: EndScreenCanvas
   m_TagString: Untagged
@@ -299,8 +301,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -357,9 +359,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e9c4fcfdd6c7c40b45c3083b1d8c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _endDelay: 3
+  _endDelay: 3.75
   _menuObjects: {fileID: 5741871271474493314}
-  _winText: {fileID: 0}
+  _winText: {fileID: 3787594031060234754}
+  _boundsSFX: {fileID: 6533478249969204636}
+  _victorSFX: {fileID: 170703579322820287}
+--- !u!114 &6533478249969204636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489689724992033425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 883132108
+      Data2: 1324172154
+      Data3: -1021608799
+      Data4: 1939029058
+    Path: event:/L__fell_off
+  Event: 
+  PlayEvent: 0
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &170703579322820287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489689724992033425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1390080331
+      Data2: 1326524703
+      Data3: 1578283952
+      Data4: -1940827447
+    Path: event:/Victory-Fanfare
+  Event: 
+  PlayEvent: 0
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2578445968317789174
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3640293625362347200
 RectTransform:
   m_ObjectHideFlags: 0

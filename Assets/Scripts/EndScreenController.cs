@@ -21,6 +21,10 @@ public class EndScreenController : MonoBehaviour
     [SerializeField] private GameObject _menuObjects;
     [SerializeField] private TextMeshProUGUI _winText;
 
+    [Header("SFX")]
+    [SerializeField] private FMODUnity.StudioEventEmitter _boundsSFX;
+    [SerializeField] private FMODUnity.StudioEventEmitter _victorSFX;
+
     #endregion
 
     #region Private Variables
@@ -73,12 +77,14 @@ public class EndScreenController : MonoBehaviour
     private void BeginEndTransition(int playerNum)
     {
         _winnerNum = playerNum;
+        PlaySFX(_boundsSFX);
         StartCoroutine(EnableEnding());
     }
 
     private IEnumerator EnableEnding()
     {
         yield return new WaitForSeconds(_endDelay);
+        PlaySFX(_victorSFX);
         SetWinText(_winnerNum);  
     }
 
@@ -109,6 +115,19 @@ public class EndScreenController : MonoBehaviour
                 break;
         }
         ShowEndScreen(true);
+    }
+
+    #endregion
+
+    #region SFX
+
+    /// <summary>
+    /// Plays a sfxx
+    /// </summary>
+    /// <param name="sfx">sfx to be played</param>
+    private void PlaySFX(FMODUnity.StudioEventEmitter sfx)
+    {
+        sfx.Play();
     }
 
     #endregion
