@@ -20,6 +20,7 @@ public class EndScreenController : MonoBehaviour
     [SerializeField] float _endDelay;
     [SerializeField] private GameObject _menuObjects;
     [SerializeField] private TextMeshProUGUI _winText;
+    [SerializeField] private GameObject _firstSelectedButton;
 
     [Header("SFX")]
     [SerializeField] private FMODUnity.StudioEventEmitter _boundsSFX;
@@ -30,6 +31,8 @@ public class EndScreenController : MonoBehaviour
     #region Private Variables
 
     private int _winnerNum;
+    private bool _hasWonUI = false;
+    private bool _hasWonTransition = false;
 
     #endregion
 
@@ -76,9 +79,13 @@ public class EndScreenController : MonoBehaviour
 
     private void BeginEndTransition(int playerNum)
     {
-        _winnerNum = playerNum;
-        PlaySFX(_boundsSFX);
-        StartCoroutine(EnableEnding());
+        if (!_hasWonTransition)
+        {
+            _hasWonTransition = true;
+            _winnerNum = playerNum;
+            PlaySFX(_boundsSFX);
+            StartCoroutine(EnableEnding());
+        }
     }
 
     private IEnumerator EnableEnding()
@@ -95,6 +102,19 @@ public class EndScreenController : MonoBehaviour
     private void ShowEndScreen(bool isVisible)
     {
         _menuObjects.SetActive(isVisible);
+
+        if(isVisible)
+        {
+            StartCoroutine(SetSelectedButton());
+        }
+    }
+
+    private IEnumerator SetSelectedButton()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.firstSelectedGameObject = _firstSelectedButton;
+        EventSystem.current.SetSelectedGameObject(_firstSelectedButton);
     }
 
     /// <summary>
@@ -103,18 +123,23 @@ public class EndScreenController : MonoBehaviour
     /// <param name="playerNum">Num player who won</param>
     private void SetWinText(int playerNum)
     {
-        switch(playerNum)
+        if (!_hasWonUI)
         {
-            case 1:
-                _winText.text = "Brown Team Victory!";
-                break;
-            case 2:
-                _winText.text = "Yellow Team Victory!";
-                break;
-            default:
-                break;
+            _hasWonUI = true;
+
+            switch (playerNum)
+            {
+                case 1:
+                    _winText.text = "Brown Team Victory!";
+                    break;
+                case 2:
+                    _winText.text = "Yellow Team Victory!";
+                    break;
+                default:
+                    break;
+            }
+            ShowEndScreen(true);
         }
-        ShowEndScreen(true);
     }
 
     #endregion
