@@ -24,6 +24,8 @@ public class HeadController : IController
         rb = GetComponent<Rigidbody>();
         PlayerInputComponent = GetComponent<PlayerInput>();
         cameraTrans = Camera.main.transform;
+
+        GetComponent<TrailRenderer>().time = 0.05f;
     }
 
     private void Update()

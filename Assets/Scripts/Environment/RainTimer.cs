@@ -130,7 +130,7 @@ public class RainTimer : MonoBehaviour
 
         // Changes Visuals
         emission.rateOverTime = emission.rateOverTime.constant / 5;
-        _light.intensity = 2;
+        _light.intensity = .75f;
 
         // Increases duration of future rains
         _rainDuration += 5;
