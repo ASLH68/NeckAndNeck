@@ -130,10 +130,10 @@ public class EndScreenController : MonoBehaviour
             switch (playerNum)
             {
                 case 1:
-                    _winText.text = "Brown Team Victory!";
+                    _winText.text = "Yellow Team Victory!";
                     break;
                 case 2:
-                    _winText.text = "Yellow Team Victory!";
+                    _winText.text = "Brown Team Victory!";
                     break;
                 default:
                     break;
