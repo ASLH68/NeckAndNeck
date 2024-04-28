@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8120554113812329574}
   - component: {fileID: 5959609276622055714}
   - component: {fileID: 3313257337574416867}
+  - component: {fileID: 6466765474702806713}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -1767,7 +1768,7 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
-  m_SelectedVertices: 46000000
+  m_SelectedVertices: 
 --- !u!114 &3202380263025869586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,3 +1883,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bobbingMultiplier: 0.5
   rollMultiplier: 0.4
+--- !u!65 &6466765474702806713
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345356024749356030}
+  m_Material: {fileID: 13400000, guid: 7cb2cebf261e279429862f0ec18fe7fc, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.144738, y: 26.564182, z: 5.1117773}
+  m_Center: {x: 3.1673496, y: -2.264699, z: -3.4060984}
