@@ -59,7 +59,7 @@ public class GiraffeController : IController
     {
         moveDirection = new Vector3(xAxis, 0f, zAxis).normalized;
 
-        if (moveDirection.magnitude >= 0.1f)
+        if (canGetHit && moveDirection.magnitude >= 0.1f)
         {
             if (motionFrozen)
             {

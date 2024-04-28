@@ -984,8 +984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65450922247b4b149889368cd4d18104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1800
-  knockBackStrength: 1560000
+  moveSpeed: 300
+  knockBackStrength: 1500000
   hitFlashAnimators:
   - {fileID: 8848756174667256181}
   - {fileID: 5286304232902792877}
